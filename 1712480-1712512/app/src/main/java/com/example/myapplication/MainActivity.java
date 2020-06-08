@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView tvKQ;
     String KQ="";
     Button btn0,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9, btnCong,btnTru,btnNhan,btnChia,btnAC,btncham,btnBang;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnBang.setOnClickListener(this);
         btnAC.setOnClickListener(this);
     }
+
     String dau;
     int dem=0;
     double sobandau;
