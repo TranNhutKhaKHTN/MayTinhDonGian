@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     TextView tvKQ;
     String KQ="";
-    Button btn0,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9, btnCong,btnTru,btnNhan,btnChia,btnAC,btncham,btnBang;
+    Button btn0,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9, btnCong,btnTru,btnNhan,btnChia,btnAC,btncham,btnBang,btnXoa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnNhan=findViewById(R.id.dauNhan);
         btnAC=findViewById(R.id.AC);
         btnBang=findViewById(R.id.dauBang);
+        btnXoa=findViewById(R.id.xoa);
         tvKQ=findViewById(R.id.twKq);
     }
 
@@ -66,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnChia.setOnClickListener(this);
         btnBang.setOnClickListener(this);
         btnAC.setOnClickListener(this);
+        btnXoa.setOnClickListener(this);
     }
 
     String dau;
@@ -123,6 +125,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             KQ="";
             tvKQ.setText("");
         }
+
         if(v.getId()==R.id.dauBang && !tvKQ.getText().toString().isEmpty() && dem>0)
         {
             try
@@ -142,6 +145,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(v.getId()==R.id.AC)
         {
             AC();
+        }
+        if(v.getId()==R.id.xoa)
+        {
+            tvKQ.setText("");
         }
 
     }
